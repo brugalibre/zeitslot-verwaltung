@@ -1,0 +1,10 @@
+const PLANNER_OVERVIEW_PATH = "/planner";
+const LOGIN_PATH = PLANNER_OVERVIEW_PATH + "/login";
+const REGISTER_PATH = PLANNER_OVERVIEW_PATH + "/register";
+const PROFILE_PATH = PLANNER_OVERVIEW_PATH + "/profile";
+export default {
+    PROFILE_PATH,
+    PLANNER_OVERVIEW_PATH,
+    REGISTER_PATH,
+    LOGIN_PATH
+};

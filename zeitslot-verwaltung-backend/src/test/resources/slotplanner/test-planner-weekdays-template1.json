@@ -1,0 +1,179 @@
+{
+  "validFrom": "02.01.2024",
+  "validUpto": "15.01.2024",
+  "days": [
+    {
+      "dayOfWeek": "MONDAY",
+      "slots": [
+        {
+          "availableSpace": 4,
+          "begin": "08:00",
+          "end": "12:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        },
+        {
+          "availableSpace": 4,
+          "begin": "13:00",
+          "end": "17:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayOfWeek": "TUESDAY",
+      "slots": [
+        {
+          "availableSpace": 4,
+          "begin": "08:00",
+          "end": "12:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        },
+        {
+          "availableSpace": 4,
+          "begin": "13:00",
+          "end": "17:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayOfWeek": "WEDNESDAY",
+      "slots": [
+        {
+          "availableSpace": 4,
+          "begin": "08:00",
+          "end": "12:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        },
+        {
+          "availableSpace": 4,
+          "begin": "13:00",
+          "end": "17:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayOfWeek": "THURSDAY",
+      "slots": [
+        {
+          "availableSpace": 4,
+          "begin": "08:00",
+          "end": "12:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        },
+        {
+          "availableSpace": 4,
+          "begin": "13:00",
+          "end": "17:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayOfWeek": "FRIDAY",
+      "slots": [
+        {
+          "availableSpace": 4,
+          "begin": "08:00",
+          "end": "12:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        },
+        {
+          "availableSpace": 4,
+          "begin": "13:00",
+          "end": "17:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayOfWeek": "SATURDAY",
+      "slots": [
+        {
+          "availableSpace": 4,
+          "begin": "08:00",
+          "end": "12:00",
+          "providedServices": [
+            {
+              "name": "Kinderbetreuung"
+            },
+            {
+              "name": "Verpflegung"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

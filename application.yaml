@@ -1,0 +1,40 @@
+logging:
+  file.name: logs/zeitslot-verwaltung.log
+
+application:
+  configuration:
+    business-vacations: slotplanner/business-vacations.json
+    template-planner-files: slotplanner/planner-weekdays-template.json
+  security:
+    jwtSecret: 'ksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosdksdfkjaloosd'
+    jwtExpirationMs: 999999
+  title: Zeitslot Verwaltung
+  version: 1.0.0
+
+spring:
+  liquibase:
+    dropFirst: true
+  datasource:
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+    url: jdbc:h2:file:./planner-db/application;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            scripts:
+              action: create
+              create-target: created.sql
+              create-source: metadata
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: always

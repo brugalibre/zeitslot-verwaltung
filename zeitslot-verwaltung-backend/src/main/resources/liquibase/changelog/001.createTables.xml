@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="28-07-2024-create-all-tables" author="dstalder">
+        <createTable tableName="USERS">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="password" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="char(2)"/>
+        </createTable>
+        <createTable tableName="USER_ENTITY_ROLE">
+            <column name="user_entity_id" type="varchar(255)">
+                <constraints nullable="false" foreignKeyName="FK_USER_ENTITY_ROLE_TO_USER" references="USERS(id)"/>
+            </column>
+            <column name="roles" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="MOBILE_PHONE_ENTITY">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="varchar(255)">
+                <constraints nullable="false" foreignKeyName="FK_MOBILE_PHONE_TO_USER" references="USERS(id)"/>
+            </column>
+            <column name="phone_nr" type="varchar(255)"/>
+            <column name="contact_point_type" type="varchar(255)"/>
+        </createTable>
+        <createTable tableName="booked_time_slot">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="beginn" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

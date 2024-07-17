@@ -1,0 +1,65 @@
+//import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
+
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'maven-publish'
+    id 'org.springframework.boot' version '3.3.1'
+//    id "org.openapi.generator" version "7.7.0"
+}
+//apply plugin: 'org.openapi.generator'
+apply from: 'test.gradle'
+
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
+
+group 'com.brugalibre.zeitslost-verwaltung'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'com.brugalibre.visitorparking.app.VisitorParkingManagementRestApplication'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.0.0'
+
+    implementation group: 'com.brugalibre', name: 'common-app-security', version: '1.2.7-SNAPSHOT'
+    implementation group: 'com.brugalibre', name: 'common-app-domain', version: '1.2.1-SNAPSHOT'
+    implementation group: 'com.brugalibre', name: 'common-app-util', version: '1.1.0-SNAPSHOT'
+
+    implementation group: 'com.h2database', name: 'h2', version: '2.1.214'
+    implementation 'org.liquibase:liquibase-core:4.29.0'
+
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    implementation 'org.projectlombok:lombok:1.18.34'
+}
+
+jar {
+    archiveBaseName = "${project.name}"
+    archiveVersion =  "${project.version}"
+}
+
+tasks.named('bootJar') {
+    launchScript()
+}
+
+publish {
+    dependsOn assemble
+}
+
+//compileJava.dependsOn tasks.named("openApiGenerate")
+//
+//tasks.register('buildOpenHolidaysApi', GenerateTask) {
+//    generatorName.set("java")
+//    inputSpec.set("$projectDir/src/main/resources/openholidaysapi/open-holidays-api-v1.json")
+//    outputDir.set("$buildDir/generated/open-holidays-api-v1")
+//    apiPackage.set("org.openholidaysapi.api.v1")
+//    configOptions.set([
+//            dateLibrary: "java21"
+//    ])

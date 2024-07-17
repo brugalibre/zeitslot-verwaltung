@@ -1,0 +1,3 @@
+rootProject.name = 'zeitslot-verwaltung'
+include 'zeitslot-verwaltung-backend'
+
